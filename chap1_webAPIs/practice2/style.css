@@ -1,0 +1,21 @@
+:root {
+  /* color */
+  --color-yellow: #fbbe28;
+  --color-pink: #fd7f84;
+  --color-black: #3f454d;
+
+  /* size */
+  --size-box: 100px;
+  --size-boxMargin: 5px;
+}
+body {
+  background-color: var(--color-black);
+  /* overflow: hidden; */
+  /* 스크롤 못하게 하려면 overflow hidden으로! */
+}
+.coordinate_box {
+  width: var(--size-box);
+  height: var(--size-box);
+  background-color: var(--color-pink);
+  margin-top: var(--size-boxMargin);
+}
