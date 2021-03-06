@@ -1,0 +1,34 @@
+:root{
+    /* color */
+    --color-black: black;
+    --color-orange: orange;
+
+    /* size */
+    --width-imgs: 100px;
+    --height-imgs: 100px;
+    --size-marin: 30px;
+}
+
+body{
+    background-color: var(--color-black);
+}
+
+
+.scroll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.find_box{
+    background-color: var(--color-orange);
+    border: none;
+}
+
+.imgs{
+    width: var(--width-imgs);
+    height: var(--height-imgs);
+    margin-top: var(--size-marin);
+}
+

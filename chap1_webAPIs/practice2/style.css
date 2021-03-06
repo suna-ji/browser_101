@@ -19,3 +19,7 @@ body {
   background-color: var(--color-pink);
   margin-top: var(--size-boxMargin);
 }
+
+.special{
+  background-color: var(--color-yellow);
+}
