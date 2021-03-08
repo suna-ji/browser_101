@@ -1,0 +1,15 @@
+:root{
+    /* color */
+    --color-black: black;
+
+    /* size */
+    --size-width: 100px;
+    --size-headerHeight: 20px;
+    --size-listHeight: 50px;
+    --size-inputHeight: 10px;
+    --size-bottomHeight: 20px;
+}
+
+.header{
+    
+}
