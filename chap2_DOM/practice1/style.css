@@ -1,15 +1,25 @@
 :root{
     /* color */
     --color-black: black;
-
+    --color-blue: #b3e5fc;
+    --color-pink: #fce4ec;
     /* size */
-    --size-width: 100px;
-    --size-headerHeight: 20px;
-    --size-listHeight: 50px;
-    --size-inputHeight: 10px;
-    --size-bottomHeight: 20px;
+    --size-width: 500px;
+    --size-headerHeight: 50px;
+    --size-listHeight: 500px;
+    --size-inputHeight: 100px;
+    --size-bottomHeight: 50px;
+}
+
+body{
+    background-color: var(--color-blue);
+    display: flex;
+    justify-content: center;
 }
 
 .header{
-    
+    width: var(--size-width);
+    height: var(--size-headerHeight);
+    background-color: var(--color-pink);
+    border-radius: 25px 25px 0px 0px / 25px 25px 0px 0px;
 }
