@@ -25,7 +25,7 @@ function createHTMLString(item) {
     return `
         <div class = "item">
             <p class = "item_name">${item}</p>
-            <button class = "trashBtn"><img src="imgs/trash.png" alt="trash" class = "trashBtn_img"/></button>
+            <button class = "trashBtn"><img src="imgs/trash.png" alt="trash" class = "trashBtn_img" data-itemname = "${item}"/></button>
         </div>
     `;
 }
@@ -40,4 +40,12 @@ plusBtn.addEventListener('click', () => {
     }else{
 
     }
+})
+
+const shoppingList = document.querySelector('.shopping_list');
+shoppingList.addEventListener('click', (event) => {
+    const clicked_item = event.target.dataset.itemname;
+    const index = items.indexOf(clicked_item);
+    items.splice(index,1);
+    displayItems(items);
 })
