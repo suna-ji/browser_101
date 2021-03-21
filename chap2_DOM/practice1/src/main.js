@@ -1,4 +1,5 @@
 const input = document.querySelector('.item_input');
+const plusBtn = document.querySelector('.plusBtn');
 let items = [];
 
 input.addEventListener('keyup', (event) => {
@@ -29,3 +30,14 @@ function createHTMLString(item) {
     `;
 }
 
+
+plusBtn.addEventListener('click', () => {
+    const item_name = input.value;
+    if(item_name != ""){
+        items.push(item_name);
+        input.value = "";
+        displayItems(items);
+    }else{
+
+    }
+})
