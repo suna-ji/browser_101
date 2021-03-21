@@ -3,23 +3,95 @@
     --color-black: black;
     --color-blue: #b3e5fc;
     --color-pink: #fce4ec;
+    --color-grey: #efefef;
+    --color-white: white;
     /* size */
     --size-width: 500px;
+    --size-inputWidth: 496px;
     --size-headerHeight: 50px;
     --size-listHeight: 500px;
-    --size-inputHeight: 100px;
+    --size-itemHeight: 50px;
+    --size-trashBtnWidth: 30px;
+    --size-trashBtnHeight: 30px;
+    --size-inputHeight: 30px;
     --size-bottomHeight: 50px;
+    --size-plusBtnWidth: 40px;
+    --size-plusBtnHeight: 40px;
+
+    
 }
 
 body{
     background-color: var(--color-blue);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header{
+    margin-top: 100px;
     width: var(--size-width);
     height: var(--size-headerHeight);
-    background-color: var(--color-pink);
+    background: linear-gradient(45deg,#ff6090, #9198e5);
     border-radius: 25px 25px 0px 0px / 25px 25px 0px 0px;
+}
+
+.header_name{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+.shopping_list{
+    background-color: var(--color-pink);
+    width: var(--size-width);
+    height: var(--size-listHeight);
+    overflow-y: scroll;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    height: var(--size-itemHeight);
+}
+.item_name{
+    /* display: inline; */
+    font-size: 16px;
+    font-weight: bold;
+}
+.trashBtn{
+    background-color: transparent;
+    border: none;
+}
+
+.trashBtn_img{
+    width: var(--size-trashBtnWidth);
+    height: var(--size-trashBtnHeight);
+}
+
+.item_input{
+    width: var(--size-inputWidth);
+    height: var(--size-inputHeight);
+    border: none;
+    
+}
+
+.button_section{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(45deg,#ff6090, #9198e5);
+    width: var(--size-width);
+    height: var(--size-bottomHeight);
+    border-radius: 0px 0px 25px 25px / 0px 0px 25px 25px;
+}
+
+.plusBtn{
+    background-color: transparent;
+    border: none;
+}
+
+.plusBtn_img{
+    width: var(--size-plusBtnWidth);
+    height: var(--size-plusBtnHeight);
 }
