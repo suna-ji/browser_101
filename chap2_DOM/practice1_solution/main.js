@@ -20,7 +20,7 @@ function onAdd(){
     input.focus();
 }
 
-function creatItem(text ) {
+function creatItem(text) {
     const itemRow = document.createElement('li');
     itemRow.setAttribute('class', 'item__row');
 
@@ -34,10 +34,7 @@ function creatItem(text ) {
     const deleteBtn = document.createElement('button');
     deleteBtn.setAttribute('class', 'item__delete');
     deleteBtn.innerHTML = '<i class = "fas fa-trash-alt"></i>';
-    deleteBtn.addEventListener('click', () => {
-        items.removeChild(itemRow);
-    })
-
+    
     const itemDivider = document.createElement('div');
     itemDivider.setAttribute('class', 'item__divider');
 
@@ -49,6 +46,14 @@ function creatItem(text ) {
     return itemRow;
 
 }
+
+items.addEventListener('click', (event) => {
+    if(event.target.className == 'item__delete' || event.target.className === "fas fa-trash-alt"){
+        console.log(event.path[3]);
+        items.removeChild(event.path[3]);
+    }
+});
+
 addBtn.addEventListener('click', () => {
     onAdd();
 });
@@ -58,3 +63,7 @@ input.addEventListener('keypress', event => {
         onAdd();
     }
 });
+
+
+// 지금 코드는 이벤트 리스너를 항목마다 다 추가했음
+// 이벤트 위임을 사용해서 개선해보자!
