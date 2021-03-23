@@ -72,6 +72,7 @@ body{
 
 .item_input{
     width: var(--size-inputWidth);
+    /* width: 100%; */
     height: var(--size-inputHeight);
     border: none;
     
