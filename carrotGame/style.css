@@ -3,6 +3,8 @@
     --size-playBtn : 50px;
     --size-timer: 100px;
     --size-counter: 50px;
+    /* color */
+    --color-popUpColor: grey;
     
 }
 body {
@@ -12,22 +14,37 @@ body {
     box-sizing: border-box;
 }
 
-header{
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.playBtn{
+button {
+    outline: none;
+    background: transparent;
+    border: none;
+}
+
+ul {
+    list-style:none;
+}
+
+.playBtn {
     width: var(--size-playBtn);
 }
 
-.timer{
+.timer {
     width: var(--size-timer);
     text-align: center;
 }
 
-.counter{
+.counter {
     width: var(--size-counter);
     text-align: center;
 }
+
+.endPopUP {
+    background-color: var(--color-popUpColor);
+}
+
