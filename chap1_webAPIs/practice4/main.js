@@ -15,7 +15,8 @@ addEventListener('load', () =>{
         vertical.style.transform = `translateX(${x}px)`;
         horizontal.style.transform = `translateY(${y}px)`;
 
-        target.style.transform = `translate(${x - targetHalfWidth}px, ${y - targetHalfHeight}px)`;
+        target.style.transform = `translate(${x}px, ${y}px)`;
+        // target.style.transform = `translate(${x - targetHalfWidth}px, ${y - targetHalfHeight}px)`;
         tag.style.transform = `translate(${x}px, ${y}px)`;
     
         tag.innerHTML = `${x}px ${y}px`;
