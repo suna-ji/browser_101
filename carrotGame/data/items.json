@@ -25,5 +25,32 @@
             "posY": "400px",
             "isClicked" : "false"
         }
+    ],
+    "bugs": [
+        {
+            "posX": "500px",
+            "posY": "200px",
+            "isClicked" : "false"
+        },
+        {
+            "posX": "500px",
+            "posY": "200px",
+            "isClicked" : "false"
+        },
+        {
+            "posX": "500px",
+            "posY": "300px",
+            "isClicked" : "false"
+        },
+        {
+            "posX": "600px",
+            "posY": "400px",
+            "isClicked" : "false"
+        },
+        {
+            "posX": "700px",
+            "posY": "400px",
+            "isClicked" : "false"
+        }
     ]
 }

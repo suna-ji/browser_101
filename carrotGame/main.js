@@ -1,6 +1,6 @@
 const playBtn = document.querySelector('.playBtn');
 const carrots__ul = document.querySelector('.carrots__ul');
-const bugs = document.querySelector('.bugs');
+const bugs__ul = document.querySelector('.bugs__ul');
 
 const clientX = document.documentElement.clientWidth;
 const clientY = document.documentElement.clientHeight;
@@ -37,7 +37,7 @@ const clientY = document.documentElement.clientHeight;
 //     return Math.random() * (max - min) + min;
 //   }
 
-function createHTMLString(carrot){
+function createCarrotHTMLString(carrot){
     return `
         <li class="carrot" style = "transform: translate(${carrot.posX}, ${carrot.posY})" >
             <button class="carrot__btn">
@@ -47,23 +47,35 @@ function createHTMLString(carrot){
     `;
 }
 
-function displayCarrots(carrots){
-    carrots__ul.innerHTML = carrots.map(carrot => createHTMLString(carrot)).join('');
+function createBugHTMLString(bug){
+    return `
+        <li class="bug" style = "transform: translate(${bug.posX}, ${bug.posY})" >
+            <button class="bug__btn">
+                <img src="img/bug.png" alt="bug_img">
+            </button>
+        </li>
+    `;
 }
 
+function displayCarrots(carrots){
+    carrots__ul.innerHTML = carrots.map(carrot => createCarrotHTMLString(carrot)).join('');
+}
+
+function displayBugs(bugs){
+    bugs__ul.innerHTML = bugs.map(bug => createBugHTMLString(bug)).join('');
+}
 
 
 // Fetch the items from the JSON file
 function loadItems() {
-    return fetch('data/carrots.json')
+    return fetch('data/items.json')
         .then(response => response.json())
-        .then(json => json.carrots)
 }
 
 // json파일을 동적으로 불러와야함 -> 시간이 걸림 -> promise리턴
-// main
 loadItems()
-    .then(carrots => {
-        displayCarrots(carrots);
+    .then(json => {
+        displayCarrots(json.carrots);
+        displayBugs(json.bugs);
         // setEventListeners(carrots);
     })
