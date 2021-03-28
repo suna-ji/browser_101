@@ -1,0 +1,29 @@
+{
+    "carrots": [
+        {
+            "posX": "300px",
+            "posY": "200px",
+            "isClicked" : "false"
+        },
+        {
+            "posX": "200px",
+            "posY": "200px",
+            "isClicked" : "false"
+        },
+        {
+            "posX": "100px",
+            "posY": "200px",
+            "isClicked" : "false"
+        },
+        {
+            "posX": "300px",
+            "posY": "400px",
+            "isClicked" : "false"
+        },
+        {
+            "posX": "300px",
+            "posY": "400px",
+            "isClicked" : "false"
+        }
+    ]
+}
