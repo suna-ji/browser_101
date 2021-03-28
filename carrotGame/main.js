@@ -1,5 +1,6 @@
 const playBtn = document.querySelector('.playBtn');
-const first_carrot = document.querySelector('.carrot');
+const carrots = document.querySelector('.carrots');
+const bugs = document.querySelector('.bugs');
 const clientX = document.documentElement.clientWidth;
 const clientY = document.documentElement.clientHeight;
 
@@ -14,7 +15,7 @@ const oldX = carrotRect.left;
 const oldY = carrotRect.top;
 
 playBtn.addEventListener('click', (event) => {
-    console.log(event);
+
 
     let newX = getRandomPosition(-oldX, clientX - oldX - carrotWidth);
     let newY = getRandomPosition(-oldY, clientY - oldY - carrotHeight);
@@ -25,7 +26,7 @@ playBtn.addEventListener('click', (event) => {
     first_carrot.style.transform = `translate(${newX}px, ${newY}px)`;
    
 });
-
+function 
 
 function getRandomPosition(min, max) {
     return Math.random() * (max - min) + min;
